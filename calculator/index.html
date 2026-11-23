@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>4-H / FFA Livestock Project Tax Calculator (2026) | Project Ledger</title>
+  <meta name="description" content="Enter auction money, add-ons, prizes, a 1099-MISC, and project expenses. Get net income, a printable line 8z statement, a 2026 filing check, and preparer flags.">
+  <link rel="canonical" href="https://spartan3055.github.io/livestock-project-tax/calculator/">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#3d5a2a">
+  <meta property="og:title" content="4-H / FFA Livestock Project Tax Calculator (2026) | Project Ledger">
+  <meta property="og:description" content="Enter auction money, add-ons, prizes, a 1099-MISC, and project expenses. Get net income, a printable line 8z statement, a 2026 filing check, and preparer flags.">
+  <meta property="og:url" content="https://spartan3055.github.io/livestock-project-tax/calculator/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Project Ledger">
+  <script type="application/ld+json">
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://spartan3055.github.io/livestock-project-tax/#org",
+  "name": "Project Ledger",
+  "url": "https://spartan3055.github.io/livestock-project-tax/",
+  "description": "Free educational worksheet for 4-H and FFA livestock project income at tax time."
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://spartan3055.github.io/livestock-project-tax/#website",
+  "name": "Project Ledger",
+  "url": "https://spartan3055.github.io/livestock-project-tax/",
+  "publisher": {
+   "@id": "https://spartan3055.github.io/livestock-project-tax/#org"
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "4-H / FFA Livestock Project Tax Calculator",
+  "url": "https://spartan3055.github.io/livestock-project-tax/calculator/",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any (web browser)",
+  "offers": {
+   "@type": "Offer",
+   "price": "0",
+   "priceCurrency": "USD"
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://spartan3055.github.io/livestock-project-tax/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Calculator",
+    "item": "https://spartan3055.github.io/livestock-project-tax/calculator/"
+   }
+  ]
+ }
+]
+</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="wordmark" href="../">
+      <span class="mark" aria-hidden="true">PL</span>
+      <span><strong>PROJECT LEDGER</strong><span class="tag">4-H &amp; FFA livestock project tax helper</span></span>
+    </a>
+    <nav class="primary" aria-label="Primary">
+      <a href="../">Home</a>
+      <a href="../calculator/" aria-current="page">Calculator</a>
+      <a href="../guides/">Guides</a>
+      <a href="../record-book/">Record book</a>
+      <a href="../sources/">Sources</a>
+    </nav>
+  </div>
+</header>
+  <main id="main">
+    
+<div class="wrap">
+  <p class="crumbs"><a href="../">Home</a> / Calculator</p>
+  <h1>4-H / FFA livestock project tax calculator (2026)</h1>
+  <p class="lede">For one child's market animal projects for tax year 2026. If the child sold more than one animal, add them together. Nothing you type leaves this page.</p>
+  <div class="calc">
+    <form id="calc" autocomplete="off">
+      <fieldset><legend>Project</legend>
+        <div class="field"><label for="childName">Child's name <span class="hint">Only printed on the statement</span></label><input type="text" id="childName"></div>
+        <div class="field"><label for="project">Species / project <span class="hint">e.g. market steer</span></label><input type="text" id="project"></div>
+      </fieldset>
+      <fieldset><legend>Money received in 2026</legend>
+        <div class="field"><label for="auction">Auction sale proceeds<span class="hint">Gross sale amount before any fees withheld</span></label><input type="number" inputmode="decimal" min="0" step="0.01" id="auction" name="auction" placeholder="0"></div>
+        <div class="field"><label for="addons">Add-ons / buyer premiums<span class="hint">Extra money buyers or supporters added</span></label><input type="number" inputmode="decimal" min="0" step="0.01" id="addons" name="addons" placeholder="0"></div>
+        <div class="field"><label for="prizes">Prizes and premiums<span class="hint">Show premiums, ribbon money, cash awards</span></label><input type="number" inputmode="decimal" min="0" step="0.01" id="prizes" name="prizes" placeholder="0"></div>
+        <div class="field"><label for="otherIncome">Other project income<span class="hint">e.g. selling the carcass back, private sale</span></label><input type="number" inputmode="decimal" min="0" step="0.01" id="otherIncome" name="otherIncome" placeholder="0"></div>
+      </fieldset>
+      <fieldset><legend>Project expenses</legend>
+        <div class="field"><label for="animal">Purchase of the animal</label><input type="number" inputmode="decimal" min="0" step="0.01" id="animal" name="animal" placeholder="0"></div>
+        <div class="field"><label for="feed">Feed</label><input type="number" inputmode="decimal" min="0" step="0.01" id="feed" name="feed" placeholder="0"></div>
+        <div class="field"><label for="vet">Veterinary and health</label><input type="number" inputmode="decimal" min="0" step="0.01" id="vet" name="vet" placeholder="0"></div>
+        <div class="field"><label for="supplies">Supplies and bedding</label><input type="number" inputmode="decimal" min="0" step="0.01" id="supplies" name="supplies" placeholder="0"></div>
+        <div class="field"><label for="entry">Entry and registration fees</label><input type="number" inputmode="decimal" min="0" step="0.01" id="entry" name="entry" placeholder="0"></div>
+        <div class="field"><label for="commission">Sale commission or fees withheld<span class="hint">Only if the check was reduced and you entered the full sale above</span></label><input type="number" inputmode="decimal" min="0" step="0.01" id="commission" name="commission" placeholder="0"></div>
+        <div class="field"><label for="otherExp">Other project expenses</label><input type="number" inputmode="decimal" min="0" step="0.01" id="otherExp" name="otherExp" placeholder="0"></div>
+      </fieldset>
+      <fieldset><legend>1099 received</legend>
+        <div class="field"><label for="box">Form and box</label><select id="box"><option value="none">No 1099 (yet)</option><option value="box3">1099-MISC, box 3 (Other income)</option><option value="nec">1099-NEC</option><option value="other">Another form or box</option></select></div>
+        <div class="field"><label for="f1099">Amount on the 1099<span class="hint">If more than one, add them</span></label><input type="number" inputmode="decimal" min="0" step="0.01" id="f1099" name="f1099" placeholder="0"></div>
+        <div class="field"><label for="payer">Payer name <span class="hint">Only printed on the statement</span></label><input type="text" id="payer"></div>
+      </fieldset>
+      <fieldset><legend>The child's other 2026 income</legend>
+        <div class="field"><label for="wages">Wages from jobs (earned income)<span class="hint">W-2 pay, tips</span></label><input type="number" inputmode="decimal" min="0" step="0.01" id="wages" name="wages" placeholder="0"></div>
+        <div class="field"><label for="otherUnearned">Other unearned income<span class="hint">Bank interest, dividends, etc.</span></label><input type="number" inputmode="decimal" min="0" step="0.01" id="otherUnearned" name="otherUnearned" placeholder="0"></div>
+        <div class="field"><label for="age">Age at the end of 2026</label><select id="age"><option value="under18">Under 18</option><option value="18">18</option><option value="19to23student">19 to 23 and a full-time student</option><option value="other">Other</option></select></div>
+        <label class="check"><input type="checkbox" id="dependent" checked> <span>A parent (or someone else) can claim the child as a dependent.</span></label>
+        <label class="check"><input type="checkbox" id="halfSupport"> <span>The child's earned income was more than half of their own support. (Only matters at 18, or 19 to 23 as a student.)</span></label>
+        <label class="check"><input type="checkbox" id="business"> <span>The project might be a trade or business: it is regular and recurring, run to make a profit, or part of other farming the child does.</span></label>
+      </fieldset>
+      <div class="actions no-print"><button class="btn alt" type="submit">Update</button><button class="btn ghost" type="reset" id="clear">Clear all</button></div>
+    </form>
+    <div class="results" aria-live="polite">
+      <div class="totals"><dl>
+        <dt>Total project income</dt><dd id="out-gross">$0</dd>
+        <dt>Total project expenses</dt><dd id="out-exp">$0</dd>
+        <dt>Net project income</dt><dd id="out-net">$0</dd>
+        <dt class="big">Schedule 1, line 8z</dt><dd class="big" id="out-8z">$0</dd>
+      </dl></div>
+      <div class="panel"><h2>2026 filing check (dependents)</h2><div id="filing"></div>
+        <p class="tiny">Assumes the project is not a trade or business, so net project income counts as unearned income. Uses Rev. Proc. 2025-32 figures. The 2026 Pub. 501 table was not yet published.</p></div>
+      <div class="panel"><h2>Questions for a tax preparer</h2><div id="flags"></div></div>
+      <div class="panel statement-panel"><h2>Statement for line 8z</h2>
+        <p class="tiny">Print it or save it as a PDF to attach to the return. Pub. 225 says to attach a statement “if necessary.” Software and e-file rules vary; ask your preparer how to include it.</p>
+        <div id="statement"></div>
+        <div class="actions no-print"><button class="btn" type="button" id="print">Print statement</button></div>
+      </div>
+    </div>
+  </div>
+
+  <h2>How the numbers work</h2>
+  <ul>
+    <li><strong>Net project income</strong> = auction proceeds + add-ons + prizes + other project income, minus project expenses. Pub. 225 says to report a 4-H or FFA project's net income as “Other income” on Schedule 1 (Form 1040), line 8z.</li>
+    <li><strong>Line 8z amount</strong> = net project income, or $0 if expenses are larger (and a flag appears).</li>
+    <li><strong>Filing check</strong> for a single dependent under 65 and not blind, 2026: a return is required if unearned income is more than $1,350, earned income is more than $16,100, or gross income is more than the larger of $1,350 or earned income (up to $15,650) plus $450. These come from Rev. Proc. 2025-32 and the structure of Pub. 501 Table 2.</li>
+    <li><strong>Kiddie tax flag</strong> when unearned income is more than $2,700 (draft 2026 Form 8615 instructions).</li>
+    <li><strong>Self-employment view</strong>, only if you tick the trade-or-business box: 92.35% of net income, times 15.3%, when net earnings are $400 or more (Pub. 225, Pub. 501).</li>
+  </ul>
+  
+<aside class="disclaimer" role="note">
+  <strong>Educational only. Not tax advice.</strong>
+  <p>Project Ledger is an independent, free worksheet site. It is not affiliated with or endorsed by 4-H, National FFA, USDA, the IRS, any fair, or any extension office. Tax rules depend on each family's facts, and the earned-versus-unearned question for project income is not settled for every case. Check your numbers with a tax preparer or the IRS before you file.</p>
+  <p><a href="../disclaimer/">Full disclaimer</a> · <a href="../sources/">All sources</a></p>
+</aside>
+  <h2>Sources</h2><ul class="sources"><li><a href="https://www.irs.gov/pub/irs-pdf/p225.pdf" rel="noopener">Publication 225, Farmer's Tax Guide (for 2025 returns), IRS</a><span class="final">final</span></li><li><a href="https://www.irs.gov/pub/irs-drop/rp-25-32.pdf" rel="noopener">Rev. Proc. 2025-32 (2026 inflation adjustments), IRS</a><span class="final">final</span></li><li><a href="https://www.irs.gov/pub/irs-pdf/p501.pdf" rel="noopener">Publication 501 (2025), Dependents, Standard Deduction, and Filing Information, IRS</a><span class="final">final</span></li><li><a href="https://www.irs.gov/pub/irs-dft/i8615--dft.pdf" rel="noopener">2026 Instructions for Form 8615 (draft, dated June 11, 2026), IRS</a><span class="draft">DRAFT form</span></li><li><a href="https://www.irs.gov/pub/irs-dft/f1040s1--dft.pdf" rel="noopener">2026 Schedule 1 (Form 1040) (draft), IRS</a><span class="draft">DRAFT form</span></li><li><a href="https://www.irs.gov/pub/irs-pdf/i1099mec.pdf" rel="noopener">Instructions for Forms 1099-MISC and 1099-NEC (Rev. December 2026), IRS</a><span class="final">final</span></li><li><a href="https://shelby.osu.edu/sites/shelby/files/imce/Livestock%20Sale%20and%20Prize%20Winnings%20National%204-H%20Fact%20Sheet.pdf" rel="noopener">National 4-H Headquarters fact sheet, “Livestock Sales and Prize Winnings Related to 4-H Programs” (hosted by Ohio State University Extension, Shelby County)</a><span class="draft">older document</span></li><li><a href="https://farmoffice.osu.edu/sites/aglaw/files/site-library/Sale%20of%204H%20TaxBulletin.pdf" rel="noopener">Ohio State University Extension Tax Bulletin, “Sale of 4-H or FFA Projects Has Tax Implications” (January 2014)</a><span class="draft">older document</span></li></ul><p class="tiny">All sources retrieved November 23, 2026. Draft IRS forms can change before they are final.</p>
+</div>
+  </main>
+  
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <h2>Project Ledger</h2>
+      <p>A free worksheet that turns a 4-H or FFA market animal project's records into the numbers a family needs at tax time. Everything runs in your browser. Nothing you type is saved or sent anywhere.</p>
+      <p>Educational only. Not tax, legal, or financial advice. Not affiliated with 4-H, National FFA, USDA, or the IRS.</p>
+      <p class="tiny">Sources last retrieved November 23, 2026. © 2026 Project Ledger.</p>
+    </div>
+    <div>
+      <h2>Pages</h2>
+      <ul>
+        <li><a href="../calculator/">Project tax calculator</a></li>
+        <li><a href="../guides/do-4-h-kids-pay-tax-on-livestock-auction-money/">Do 4-H kids pay tax on auction money?</a></li><li><a href="../guides/does-my-child-need-to-file-taxes-ffa-steer-sale/">Does my child need to file for an FFA steer sale?</a></li><li><a href="../guides/1099-misc-2000-threshold-fair-livestock-auctions/">The $2,000 1099-MISC change for fair auctions</a></li><li><a href="../guides/deduct-feed-and-vet-costs-4-h-ffa-project/">Can feed and vet costs be subtracted?</a></li><li><a href="../guides/kiddie-tax-4-h-ffa-livestock-project/">The kiddie tax and livestock projects</a></li><li><a href="../guides/schedule-1-line-8z-4-h-ffa-project-statement/">Schedule 1 line 8z statement</a></li>
+        <li><a href="../record-book/">Record book ($8)</a></li>
+        <li><a href="../sources/">Sources</a></li>
+        <li><a href="../about/">About</a></li>
+        <li><a href="../disclaimer/">Disclaimer</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+  <script src="../calc.js"></script>
+</body>
+</html>
