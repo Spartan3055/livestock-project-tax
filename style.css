@@ -1,0 +1,93 @@
+:root{--barn:#8a2b1e;--field:#3d5a2a;--hay:#d9a441;--paper:#faf7f0;--ink:#23201c;--muted:#5d564c;--line:#e2dccf;--card:#fff}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--paper)}
+a{color:var(--barn)}
+a:hover{color:#5f1c13}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+.narrow{max-width:760px}
+.skip{position:absolute;left:-999px}.skip:focus{left:10px;top:10px;background:#fff;padding:8px;z-index:9}
+.site-header{background:var(--field);color:#fff;border-bottom:4px solid var(--hay)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:12px;padding-bottom:12px}
+.wordmark{display:flex;gap:10px;align-items:center;color:#fff;text-decoration:none}
+.mark{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:8px;background:var(--hay);color:var(--field);font-weight:800}
+.wordmark strong{display:block;letter-spacing:.06em}
+.tag{display:block;font-size:13px;opacity:.85}
+nav.primary{display:flex;gap:4px 16px;flex-wrap:wrap}
+nav.primary a{color:#fff;text-decoration:none;font-size:15px;padding:4px 0;border-bottom:2px solid transparent}
+nav.primary a[aria-current=page],nav.primary a:hover{border-bottom-color:var(--hay)}
+main{padding:28px 0 40px}
+h1{font-size:clamp(28px,4.4vw,42px);line-height:1.15;margin:.2em 0 .4em;color:var(--field)}
+h2{font-size:clamp(21px,3vw,27px);line-height:1.25;margin:1.6em 0 .5em;color:var(--field)}
+h3{font-size:19px;margin:1.3em 0 .4em}
+.lede{font-size:19px;color:var(--muted)}
+.crumbs{font-size:14px;color:var(--muted);margin:0 0 8px}
+.hero{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;margin-bottom:24px}
+.btn{display:inline-block;background:var(--barn);color:#fff;text-decoration:none;padding:12px 18px;border-radius:10px;font-weight:700;border:0;font-size:16px;cursor:pointer}
+.btn:hover{background:#6d2116;color:#fff}
+.btn.alt{background:var(--field)}
+.btn.ghost{background:transparent;color:var(--field);border:2px solid var(--field)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
+.card h3{margin-top:0}
+.disclaimer{background:#fff8e6;border:1px solid #ead9a8;border-left:5px solid var(--hay);border-radius:10px;padding:14px 18px;margin:26px 0;font-size:15px}
+.disclaimer p{margin:.4em 0}
+.tiny{font-size:13.5px;color:var(--muted)}
+.sources{font-size:15px}
+.sources li{margin:.35em 0}
+.draft{display:inline-block;background:#fde8e4;color:#7a2418;border-radius:6px;padding:0 6px;font-size:12.5px;font-weight:700;margin-left:4px}
+.final{display:inline-block;background:#e6f0df;color:#2f4720;border-radius:6px;padding:0 6px;font-size:12.5px;font-weight:700;margin-left:4px}
+table{border-collapse:collapse;width:100%;margin:10px 0;background:#fff}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:#f1ede3}
+td.num,th.num{text-align:right;white-space:nowrap}
+tr.tot td{font-weight:700;background:#f7f4ec}
+.tablewrap{overflow-x:auto}
+/* calculator */
+.calc{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:22px;align-items:start}
+fieldset{border:1px solid var(--line);border-radius:12px;background:#fff;padding:14px 16px 6px;margin:0 0 16px}
+legend{font-weight:800;color:var(--field);padding:0 6px}
+.field{display:grid;grid-template-columns:1fr 150px;gap:10px;align-items:center;margin:0 0 10px}
+.field label{font-size:15px}
+.field .hint{display:block;font-size:12.5px;color:var(--muted)}
+input[type=text],input[type=number],select{width:100%;font:inherit;font-size:16px;padding:8px 10px;border:1px solid #c9c0ae;border-radius:8px;background:#fff}
+input:focus,select:focus{outline:3px solid #f0d28a;border-color:var(--hay)}
+.check{display:flex;gap:10px;align-items:flex-start;margin:0 0 12px;font-size:15px}
+.check input{margin-top:5px;width:18px;height:18px}
+.results{position:sticky;top:12px}
+.totals{background:var(--field);color:#fff;border-radius:12px;padding:16px 18px;margin-bottom:14px}
+.totals dl{display:grid;grid-template-columns:1fr auto;gap:4px 12px;margin:0}
+.totals dt{opacity:.9}.totals dd{margin:0;text-align:right;font-weight:700}
+.totals .big{font-size:22px;color:var(--hay)}
+.panel{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:14px}
+.panel h2{margin:.1em 0 .4em;font-size:20px}
+.verdict{font-weight:800;margin:.2em 0}
+.verdict.yes{color:var(--barn)}.verdict.no{color:var(--field)}.verdict.ask{color:#7a5a00}
+.checks{padding-left:20px;font-size:15px}
+.flag{border-radius:10px;padding:10px 12px;margin:0 0 10px;font-size:15px}
+.flag p{margin:.25em 0 0}
+.flag.ask{background:#fdeee9;border-left:5px solid var(--barn)}
+.flag.note{background:#f1f4ec;border-left:5px solid var(--field)}
+#statement{background:#fff;border:1px dashed #b9ae98;border-radius:10px;padding:16px;font-size:15px}
+#statement h3{margin-top:0}
+#statement td.num,#statement th.num{width:130px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 18px}
+.privacy{font-size:14px;color:var(--muted)}
+.price{font-size:28px;font-weight:800;color:var(--barn)}
+.site-footer{background:#2b2620;color:#e9e2d4;padding:30px 0;margin-top:30px;font-size:15px}
+.site-footer .wrap{display:grid;grid-template-columns:2fr 1fr;gap:24px}
+.site-footer a{color:#f3d48c}
+.site-footer h2{color:#fff;font-size:18px;margin-top:0}
+.site-footer ul{list-style:none;padding:0;margin:0}
+.site-footer li{margin:.3em 0}
+.site-footer .tiny{color:#bfb5a3}
+@media (max-width:820px){.calc{grid-template-columns:1fr}.results{position:static}.site-footer .wrap{grid-template-columns:1fr}}
+@media (max-width:480px){body{font-size:16px}.field{grid-template-columns:1fr 120px}.hero{padding:18px}}
+@media print{
+  body{background:#fff}
+  body>*:not(main),main .wrap>*:not(.calc),.calc>form,.results>*:not(.statement-panel),.statement-panel>*:not(#statement){display:none!important}
+  main{padding:0}.calc,.results{display:block;position:static}
+  .statement-panel{border:0;padding:0;margin:0}
+  #statement{border:0;padding:0}
+}
+.print-only{display:none}
